@@ -7,6 +7,7 @@ import styled from "styled-components";
 import { saveAs } from "file-saver";
 import { SAMPLE_CODE } from './mocks/sample'
 import { Button } from './components/Navbar/Navbar.styles'
+import { GlobalStyles } from "./GlobalStyles";
 
 import "ace-builds/src-noconflict/theme-github";
 import "ace-builds/src-noconflict/theme-monokai";
@@ -47,6 +48,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <GlobalStyles theme={theme} />
       <Navbar
         theme={theme}
         runCode={runCode}
